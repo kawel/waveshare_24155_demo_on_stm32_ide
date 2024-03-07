@@ -1,6 +1,6 @@
 # Waveshare 24155 1.28 inch LCD display demo code port to STM32F072 microcontroller
 
-version 1.0.0
+version 1.0.1
 
 ## Introduction
 
