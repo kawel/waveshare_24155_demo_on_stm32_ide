@@ -36,6 +36,46 @@
 			<locationURI>PARENT-1-PROJECT_LOC/TouchLCD_STM32F072.ioc</locationURI>
 		</link>
 		<link>
+			<name>Application/Config</name>
+			<type>2</type>
+			<locationURI>PARENT-1-PROJECT_LOC/User/Config</locationURI>
+		</link>
+		<link>
+			<name>Application/Fonts</name>
+			<type>2</type>
+			<locationURI>PARENT-1-PROJECT_LOC/User/Fonts</locationURI>
+		</link>
+		<link>
+			<name>Application/GUI_DEV</name>
+			<type>2</type>
+			<locationURI>PARENT-1-PROJECT_LOC/User/GUI_DEV</locationURI>
+		</link>
+		<link>
+			<name>Application/image</name>
+			<type>2</type>
+			<locationURI>PARENT-1-PROJECT_LOC/User/image</locationURI>
+		</link>
+		<link>
+			<name>Application/LCD/LCD_1in28.h</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/User/LCD/LCD_1in28.h</locationURI>
+		</link>
+		<link>
+			<name>Application/LCD/LCD_1inch28.c</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/User/LCD/LCD_1inch28.c</locationURI>
+		</link>
+		<link>
+			<name>Application/LCD/Touch_Driver.c</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/User/LCD/Touch_Driver.c</locationURI>
+		</link>
+		<link>
+			<name>Application/LCD/Touch_Driver.h</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/User/LCD/Touch_Driver.h</locationURI>
+		</link>
+		<link>
 			<name>Application/User/gpio.c</name>
 			<type>1</type>
 			<locationURI>PARENT-1-PROJECT_LOC/Src/gpio.c</locationURI>
@@ -74,6 +114,16 @@
 			<name>Application/User/usart.c</name>
 			<type>1</type>
 			<locationURI>PARENT-1-PROJECT_LOC/Src/usart.c</locationURI>
+		</link>
+		<link>
+			<name>Application/example/LCD_1inch28_test.c</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/User/example/LCD_1inch28_test.c</locationURI>
+		</link>
+		<link>
+			<name>Application/example/LCD_Test.h</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/User/example/LCD_Test.h</locationURI>
 		</link>
 		<link>
 			<name>Drivers/CMSIS/system_stm32f0xx.c</name>
