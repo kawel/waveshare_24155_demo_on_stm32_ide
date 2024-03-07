@@ -30,6 +30,9 @@
 #include "fonts.h"
 #include "image.h"
 #include "LCD_Test.h"
+
+#include "transport.h"
+#include "io_handling.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -71,7 +74,7 @@ void SystemClock_Config(void);
 int main(void)
 {
   /* USER CODE BEGIN 1 */
-
+  io_handling_register_handler(transport_uart);
   /* USER CODE END 1 */
 
   /* MCU Configuration--------------------------------------------------------*/

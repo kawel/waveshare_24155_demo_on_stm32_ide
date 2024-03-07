@@ -56,6 +56,16 @@
 			<locationURI>PARENT-1-PROJECT_LOC/User/image</locationURI>
 		</link>
 		<link>
+			<name>Application/io_handling</name>
+			<type>2</type>
+			<locationURI>PARENT-1-PROJECT_LOC/User/io_handling</locationURI>
+		</link>
+		<link>
+			<name>Application/transport</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
 			<name>Application/LCD/LCD_1in28.h</name>
 			<type>1</type>
 			<locationURI>PARENT-1-PROJECT_LOC/User/LCD/LCD_1in28.h</locationURI>
@@ -124,6 +134,16 @@
 			<name>Application/example/LCD_Test.h</name>
 			<type>1</type>
 			<locationURI>PARENT-1-PROJECT_LOC/User/example/LCD_Test.h</locationURI>
+		</link>
+		<link>
+			<name>Application/transport/transport.c</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/User/transport/transport.c</locationURI>
+		</link>
+		<link>
+			<name>Application/transport/transport.h</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/User/transport/transport.h</locationURI>
 		</link>
 		<link>
 			<name>Drivers/CMSIS/system_stm32f0xx.c</name>
