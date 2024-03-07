@@ -46,7 +46,7 @@ void LCD_1in28_test()
 				XY.Gesture = I2C_Read_Byte(0x01);
 				flag = TOUCH_DRAW;
 		 }      
-		DEV_Delay_ms(10);   
+		DEV_Delay_ms(2);
   }
 
 	Paint_ClearWindows(105,100,160,155,WHITE);  
@@ -58,7 +58,7 @@ void LCD_1in28_test()
 					XY.Gesture = I2C_Read_Byte(0x01);
 					flag = TOUCH_DRAW;
 			}    
-			DEV_Delay_ms(10);     
+			DEV_Delay_ms(2);
 	}
 
 	Paint_ClearWindows(85, 100,160,155,WHITE);
@@ -70,7 +70,7 @@ void LCD_1in28_test()
 					XY.Gesture = I2C_Read_Byte(0x01);
 					flag = TOUCH_DRAW;
 			}    
-			DEV_Delay_ms(10);     
+			DEV_Delay_ms(2);
 	}
 
 	Paint_ClearWindows(85, 100,160,155,WHITE);
@@ -82,7 +82,7 @@ void LCD_1in28_test()
 					XY.Gesture = I2C_Read_Byte(0x01);
 					flag = TOUCH_DRAW;
 			}     
-			DEV_Delay_ms(10);    
+			DEV_Delay_ms(2);
 	}
 
 	Paint_ClearWindows(80, 100,165,160,WHITE);
@@ -94,7 +94,7 @@ void LCD_1in28_test()
 					XY.Gesture = I2C_Read_Byte(0x01);
 					flag = TOUCH_DRAW;
 			}     
-			DEV_Delay_ms(10);    
+			DEV_Delay_ms(10);
 	}
 
 	Paint_ClearWindows(47, 100,200,155,WHITE);
@@ -106,7 +106,7 @@ void LCD_1in28_test()
 					XY.Gesture = I2C_Read_Byte(0x01);
 					flag = TOUCH_DRAW;
 			} 
-			DEV_Delay_ms(10);        
+			DEV_Delay_ms(2);
 	}
 
 	XY.mode = 1;
@@ -124,13 +124,13 @@ void LCD_1in28_test()
 					if(flgh == TOUCH_INIT && XY.x_point != TOUCH_INIT)
 					{
 									flgh = 1; 
-									//Get the coordinates of the first point    »ñÈ¡µÚÒ»´ÎµãµÄ×ø±ê
+									//Get the coordinates of the first point    ï¿½ï¿½È¡ï¿½ï¿½Ò»ï¿½Îµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 									x = XY.x_point;
 									y = XY.y_point;
 					}
 					if ((XY.x_point > 35 && XY.x_point < 205) && (XY.y_point > 35 && XY.y_point < 208))
 					{
-							flgh = TOUCH_DRAW;//Permit painting     ÔÊÐí»­
+							flgh = TOUCH_DRAW;//Permit painting     ï¿½ï¿½ï¿½ï¿½
 					}
 					else
 					{
@@ -146,8 +146,8 @@ void LCD_1in28_test()
 							if ((XY.x_point > 0 && XY.x_point < 240) && (XY.y_point > 208 && XY.y_point < 240))
 											Paint_ClearWindows(35,35,205,205,WHITE);
 
-							flgh = TOUCH_NO_DRAW; //No painting     ½ûÖ¹»­
-							flag = TOUCH_DRAW; //Change interrupt bit      ¸Ä±äÖÐ¶ÏÎ»
+							flgh = TOUCH_NO_DRAW; //No painting     ï¿½ï¿½Ö¹ï¿½ï¿½
+							flag = TOUCH_DRAW; //Change interrupt bit      ï¿½Ä±ï¿½ï¿½Ð¶ï¿½Î»
 					}
 					
 
@@ -159,13 +159,13 @@ void LCD_1in28_test()
 							XY.x_point = (XY.x_point < 205)? XY.x_point : 205;
 							XY.y_point = (XY.y_point < 203)? XY.y_point : 203;    
 							
-							if (l<48000) //Continuous drawing    Á¬Ðø»­
+							if (l<48000) //Continuous drawing    ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 							{
 									flag = TOUCH_DRAW;
 									Paint_DrawLine(x,y,XY.x_point, XY.y_point, XY.color, DOT_PIXEL_2X2, LINE_STYLE_SOLID);
 									l=0;
 							}
-							else//Draw Point    »­µã
+							else//Draw Point    ï¿½ï¿½ï¿½ï¿½
 							{
 									flag = TOUCH_DRAW; 
 									Paint_DrawPoint(XY.x_point, XY.y_point, XY.color, DOT_PIXEL_2X2, DOT_FILL_AROUND);
@@ -176,7 +176,7 @@ void LCD_1in28_test()
 					}
 			}
 			l++;
-			if (l>50000) //Decide whether to draw dots or lines   ÅÐ¶Ï»­µã»¹ÊÇ»­Ïß
+			if (l>50000) //Decide whether to draw dots or lines   ï¿½Ð¶Ï»ï¿½ï¿½ã»¹ï¿½Ç»ï¿½ï¿½ï¿½
 			{
 					l=49000;
 			}
