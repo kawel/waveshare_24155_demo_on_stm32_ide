@@ -1,6 +1,6 @@
 # Waveshare 24155 1.28 inch LCD display demo code port to STM32F072 microcontroller
 
-version 1.0.0
+version 1.1.0
 
 ## Introduction
 
@@ -10,9 +10,11 @@ This port is based on the original code and the STM32CubeF0 HAL library and is u
 
 ## Hardware
 
-The Waveshare 1.28 inch LCD display is a 240x240 pixel display with a ST7789V driver. The display is connected to the STM32F072 microcontroller using the SPI interface. The display is powered by 3.3V and the SPI interface is also 3.3V. The display is connected to the following pins of the STM32F072 microcontroller:
+The Waveshare 1.28 inch LCD display is a 240x240 pixel display with a ST7789V driver. The display is connected to the STM32F072 microcontroller using the SPI interface. The display is powered by 3.3V and the SPI interface is also 3.3V.
 
 ### LCD
+
+[1.28inch LCD Module](https://www.waveshare.com/wiki/1.28inch_LCD_Module)  
 
 ![Waveshare 1.28 inch LCD display](/doc/img/1.28inch-Touch-LCD-details-5.jpg)
 
@@ -78,6 +80,11 @@ Set following options in the `STM32CubeIDE` project settings:
 
 ![USART2](/doc/img/uart.png)
 
+in version 1.1.0 spi is 12MBits/s and I2C is 1000kHz  
+Screen refresh rate is visibly better than in version 1.0.0  
+But still not perfect.  
+Driver is not using DMA and it is not optimized for speed.
+
 ## Final result
 
 The demo is rather slow on default settings.  
@@ -95,3 +102,11 @@ Paint_NewImage
 Set Clear and Display Funtion
 Paint_Clear
 ```
+
+## Future work
+
+Display driver is [GC9A01](https://www.buydisplay.com/download/ic/GC9A01A.pdf)
+
+Review:  
+[https://dronebotworkshop.com/gc9a01/](https://dronebotworkshop.com/gc9a01/)  
+[https://github.com/adafruit/Adafruit_GC9A01A/tree/main](https://github.com/adafruit/Adafruit_GC9A01A/tree/main)  
